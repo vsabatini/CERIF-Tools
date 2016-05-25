@@ -72,7 +72,8 @@ public enum ClassSchemeEnum {
 	OPEN_SCIENCE_COSTS("e87469e5-d6bd-458c-b7ef-90e314749c51","Open Science Costs"),
 	VERIFICATION_STATUSES("2ad984e8-33ae-4f0b-927e-d292c28750e3","Verification Statuses"),
 	USAGE("46fa3468-e5c6-4f71-8d6e-c5998d0efcb0", "Usage"),
-	CLASSSCHEME_CLASSIFICATIONS("bcc9792b-d8f9-4e70-af7c-f3889e2228e0", "ClassScheme Classifications");
+	CLASSSCHEME_CLASSIFICATIONS("bcc9792b-d8f9-4e70-af7c-f3889e2228e0", "ClassScheme Classifications"),
+	OPENAIRE_COUNTRIES("9cd2c346-290b-4f7e-afb4-0b2151c94606","OpenAIRE Countries");
 	
 	private final String uuid;
 

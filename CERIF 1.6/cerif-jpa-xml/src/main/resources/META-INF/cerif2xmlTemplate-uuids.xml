@@ -1050,8 +1050,8 @@
 #if ($link.personName.id)
 		<cfPersNameId>$link.personName.id</cfPersNameId>
 #end
-		<cfClassId>64f0eb00-462d-4737-8033-7efac82decf3</cfClassId>
-		<cfClassSchemeId>7375609d-cfa6-45ce-a803-75de69abe21f</cfClassSchemeId>
+		<cfClassId>$link.theClass.uuid</cfClassId>
+		<cfClassSchemeId>$link.theClass.scheme.uuid</cfClassSchemeId>
 #if ($link.startDate)
 		<cfStartDate>$date.format('yyyy-MM-dd',$link.startDate)T$date.format('HH:mm:ss',$link.startDate)</cfStartDate>
 #end
