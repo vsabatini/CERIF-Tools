@@ -579,8 +579,12 @@
 		<cfPersId>$organisationPers.person.id</cfPersId>		
 		<cfClassId>$organisationPers.theClass.uuid</cfClassId>			
 		<cfClassSchemeId>$organisationPers.theClass.scheme.uuid</cfClassSchemeId>
+#if ($organisationPers.startDate)		
 		<cfStartDate>$date.format('yyyy-MM-dd',$organisationPers.startDate)T$date.format('HH:mm:ss',$organisationPers.startDate)</cfStartDate>
+#end		
+#if ($organisationPers.endDate)
 		<cfEndDate>$date.format('yyyy-MM-dd',$organisationPers.endDate)T$date.format('HH:mm:ss',$organisationPers.endDate)</cfEndDate>
+#end		
 #if ($organisationPers.fraction)
 		<cfFraction>$organisationPers.fraction</cfFraction>
 #end
@@ -988,8 +992,12 @@
 		<cfResPublId>$persRespubl.resultPublication.id</cfResPublId>		
 		<cfClassId>$persRespubl.theClass.uuid</cfClassId>			
 		<cfClassSchemeId>$persRespubl.theClass.scheme.uuid</cfClassSchemeId>
+#if ($persRespubl.startDate)		
 		<cfStartDate>$date.format('yyyy-MM-dd',$persRespubl.startDate)T$date.format('HH:mm:ss',$persRespubl.startDate)</cfStartDate>
+#end
+#if ($persRespubl.endDate)		
 		<cfEndDate>$date.format('yyyy-MM-dd',$persRespubl.endDate)T$date.format('HH:mm:ss',$persRespubl.endDate)</cfEndDate>
+#end		
 #if ($persRespubl.fraction)
 		<cfFraction>$persRespubl.fraction</cfFraction>
 #end
@@ -2732,11 +2740,11 @@
 	<cfURI>$cerif.xml($resultPublication.uri)</cfURI>
 #end
 #foreach( $resultPublicationTitle in $resultPublication.resultPublicationTitles )
-	<cfTitle cfLangCode=$esc.quote$resultPublicationTitle.language.code$esc.quote cfTrans=$esc.quote$resultPublicationTitle.translation$esc.quote>$cerif.xml($resultPublicationTitle.title)</cfTitle>
+	<cfTitle>$cerif.xml($resultPublicationTitle.title)</cfTitle>
 #end
 #foreach( $resultPublicationAbstract in $resultPublication.resultPublicationAbstracts )
-	<cfAbstr cfLangCode=$esc.quote$resultPublicationAbstract.language.code$esc.quote cfTrans=$esc.quote$resultPublicationAbstract.translation$esc.quote>$cerif.xml($resultPublicationAbstract.abstractText)</cfAbstr>
-#end
+	<cfAbstr>$cerif.xml($resultPublicationAbstract.abstractText)</cfAbstr>
+#end	
 #foreach( $resultPublicationKeyword in $resultPublication.resultPublicationKeywords )
 	<cfKeyw cfLangCode=$esc.quote$resultPublicationKeyword.language.code$esc.quote cfTrans=$esc.quote$resultPublicationKeyword.translation$esc.quote>$cerif.xml($resultPublicationKeyword.keyword)</cfKeyw>
 #end
