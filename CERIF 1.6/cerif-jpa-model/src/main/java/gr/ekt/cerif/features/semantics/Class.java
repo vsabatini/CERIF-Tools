@@ -163,7 +163,6 @@ import gr.ekt.cerif.entities.link.result.ResultPublication_ResultProduct;
 import gr.ekt.cerif.entities.link.result.ResultPublication_ResultPublication;
 import gr.ekt.cerif.entities.link.result.ResultPublication_Service;
 import gr.ekt.cerif.entities.second.FederatedIdentifier;
-import gr.ekt.cerif.enumerations.semantics.ClassSchemeEnum;
 import gr.ekt.cerif.features.multilingual.ClassDefinition;
 import gr.ekt.cerif.features.multilingual.ClassDescription;
 import gr.ekt.cerif.features.multilingual.ClassEx;
@@ -771,12 +770,6 @@ public class Class implements CerifSemanticFeature {
 		this.scheme = scheme;
 	}
 
-	public Class(String schemeUUID, String classUUID) {
-		this.scheme = new ClassScheme();
-		this.scheme.setUuid(schemeUUID);
-		uuid = classUUID;
-	}
-	
 	/**
 	 * Returns the unique identifier.
 	 * @return the unique identifier.
