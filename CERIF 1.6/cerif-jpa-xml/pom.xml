@@ -9,6 +9,14 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   <packaging>jar</packaging>
   <url>http://www.ekt.gr</url>
   
+  
+   <parent>
+	   <groupId>org.dspace</groupId>
+	   <artifactId>dspace-parent</artifactId>
+	   <version>CRIS-5.5.1-SNAPSHOT</version>
+      <relativePath>../../..</relativePath>
+   </parent>
+  
   <name>Cerif data to xml project</name>
   
  <!--  <profiles>
@@ -25,12 +33,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 	</profiles> -->
 	
   <dependencies>
-  	<dependency>
+	<dependency>
 		<groupId>gr.ekt</groupId>
 		<artifactId>cerif-jpa-model</artifactId>
 		<version>0.9.2</version>
-	</dependency>
-  		
+	</dependency>  	
+		
 	<dependency>
 		<groupId>org.apache.velocity</groupId>
 		<artifactId>velocity</artifactId>
