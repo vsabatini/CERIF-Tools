@@ -11,18 +11,12 @@
 	<name>CERIF JPA Data Layer Services</name>
 	<url>http://www.ekt.gr</url>
 
-   <parent>
-	   <groupId>org.dspace</groupId>
-	   <artifactId>dspace-parent</artifactId>
-	   <version>CRIS-5.5.1-SNAPSHOT</version>
-      <relativePath>../../..</relativePath>
-   </parent>
-
 	<description>
 		<![CDATA[This project is the persistence layer for CERIF entities.]]>
 	</description>
 
 	<properties>
+		<root.basedir>${basedir}/../../..</root.basedir>
 		<maven.test.skip>true</maven.test.skip>
 		<maven.test.failure.ignore>true</maven.test.failure.ignore>
 		<org.springframework-version>3.2.8.RELEASE</org.springframework-version>
@@ -146,6 +140,7 @@
 	</scm>
 	
 	<build>
+		<directory>${root.basedir}/target </directory>	
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

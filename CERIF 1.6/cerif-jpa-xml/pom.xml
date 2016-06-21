@@ -9,16 +9,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   <packaging>jar</packaging>
   <url>http://www.ekt.gr</url>
   
-  
-   <parent>
-	   <groupId>org.dspace</groupId>
-	   <artifactId>dspace-parent</artifactId>
-	   <version>CRIS-5.5.1-SNAPSHOT</version>
-      <relativePath>../../..</relativePath>
-   </parent>
-  
+ 
   <name>Cerif data to xml project</name>
-  
+  <properties>
+  	<root.basedir>${basedir}/../../..</root.basedir>
+  </properties>  
  <!--  <profiles>
 		<profile>
 			<id>profile1</id>
@@ -115,6 +110,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   </dependencies>
   
   <build>
+<directory>${root.basedir}/target </directory>  
 		<plugins>
 		
 			<plugin>
@@ -137,4 +133,5 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		
 	</build>
   
+
 </project>

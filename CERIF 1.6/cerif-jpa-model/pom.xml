@@ -10,11 +10,14 @@
 	<name>CERIF JPA Data Model</name>
 	<url>http://www.ekt.gr</url>
 	
+
+   	
 	<description>
 		<![CDATA[This project is the persistence layer for CERIF entities.]]>
 	</description>
 	
 	<properties>
+		<root.basedir>${basedir}/../../..</root.basedir>
 		<maven.test.skip>true</maven.test.skip>
 		<maven.test.failure.ignore>true</maven.test.failure.ignore>
 		<spring.framework.version>3.2.8.RELEASE</spring.framework.version>
@@ -88,6 +91,7 @@
 		<url>svn.ekt.gr</url>
 	</scm>
 	<build>
+		<directory>${root.basedir}/target </directory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
